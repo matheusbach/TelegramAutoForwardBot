@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  tilapiabot:
+    image: mcr.microsoft.com/dotnet/sdk:6.0
+    volumes: 
+    - .:/dotnet-app
+    working_dir: /dotnet-app
+    command: dotnet run
+    restart: unless-stopped
